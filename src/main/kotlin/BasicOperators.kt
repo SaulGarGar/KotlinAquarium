@@ -1,7 +1,7 @@
 import java.util.Calendar
 
 fun main(args: Array<String>) {
-    println("Hello, ${args[0]}")
+    kotlinGreeting(args[0])
 }
 
 private fun dayOfWeek(){
@@ -21,3 +21,13 @@ private fun dayOfWeek(){
 
     println(dayName)
 }
+
+private fun kotlinGreeting(hour: String){
+    if (hour.toInt() <12){
+        println("Good morning Kotlin")
+    }
+    else {
+        println("Good night Kotlin")
+    }
+}
+
