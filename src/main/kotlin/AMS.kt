@@ -4,10 +4,27 @@ fun main(args: Array<String>) {
     feedTheFish()
 }
 
+fun shouldChangeTheWater(
+        day: String,
+        temperature: Int = 22,
+        dirty: Int = 20): Boolean{
+    return true
+}
+
+fun shouldChangeTheWater2(
+    day: String,
+    temperature: Int = 22,
+    dirty: Int = 20): Boolean{
+}
+
 fun feedTheFish() {
     val day = randomDay()
     val food = fishFood(day)
     println("Today is $day and the fish eat $food")
+
+    if (shouldChangeTheWater(day)) {
+        println("Change the water today")
+    }
 }
 
 fun randomDay(): String {
